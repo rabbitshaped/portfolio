@@ -1,0 +1,108 @@
+:root {
+  --bs-body-bg: #f6e6ea;
+  --bs-body-color: #111;
+}
+
+.btn-dark {
+  background-color: #000;
+  border-color: #000;
+}
+#ira-photo {
+    max-width: 300px;
+    border: 10px solid; 
+    border-color: #212529;
+    border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  #ira-photo {
+    max-width: 200px;
+  }
+}
+
+.btn-contact {
+    background-color: #e66a89;
+    color: white;
+}
+
+.btn-contact:hover {
+    background-color: white;
+    color: #e66a89;
+}
+
+.my-list {
+    list-style: none;
+    padding: 0;
+}
+
+#skills {
+    background-color: #faf1f3;
+}
+
+.feature {
+  max-width: 520px;
+}
+
+@media (min-width: 992px) {
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.55rem;
+  background-color: white;
+  color: #EAB6C2
+}
+
+.libre-baskerville {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.freehand-regular {
+  font-family: "Freehand", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 7em;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.freehand-regular-2 {
+  font-family: "Freehand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.licorice-regular {
+  font-family: "Licorice", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.germania-one-regular {
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
