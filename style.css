@@ -3,6 +3,11 @@
   --bs-body-color: #111;
 }
 
+.hero-title {
+  font-size: clamp(3rem, 8.5vw, 8rem) !important;
+  line-height: 1.1;
+}
+
 .btn-dark {
   background-color: #000;
   border-color: #000;
