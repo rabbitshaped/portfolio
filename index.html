@@ -4,118 +4,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ira Baraton's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-   <link rel="stylesheet" href="./style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Freehand&family=Germania+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Licorice&family=Sacramento&display=swap" rel="stylesheet">
-  <style>
-  
-  </style>
+  <meta name="description"
+    content="Frontend developer portfolio for Ira Baraton, a web developer and illustrator based in Finland.">
+  <title>Ira Baraton | Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div class="flex-container">
-    <div class="position-relative overflow-hidden p-5 text-center"> 
-      <div class="col-md-6 p-lg-5 mx-auto my-5"> 
-        <h3 class="fw-normal text-muted mb-3 freehand-regular-2">Welcome to</h3> 
-        <h1 class="fw-bold freehand-regular hero-title">Ira Baraton's</h1> 
-        <h3 class="fw-normal text-muted pt-2 freehand-regular-2">Portfolio site</h3> 
-        <div class="d-flex gap-3 justify-content-center lead fw-normal"> 
-         </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand-mark" href="#top" aria-label="Ira Baraton home">
+        <span class="brand-symbol" aria-hidden="true">IB</span>
+        <span>Ira Baraton</span>
+      </a>
+      <div class="nav-links">
+        <a href="#focus">Focus</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad" id="top">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Frontend / Full-stack Developer</p>
+          <h1>I build clean, expressive interfaces with a <span class="salmon">designer's</span> eye.</h1>
+          <p class="hero-intro">
+            I’m Ira, a Helsinki-based developer building playful, atmospheric web applications with React, Node.js,
+            Express,
+            PostgreSQL, and careful UI polish.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="mailto:rabbitshaped@gmail.com">Contact me</a>
+            <a class="button button-secondary" href="#work">View work</a>
+          </div>
+        </div>
+
+        <div class="portrait-panel reveal" style="--delay: 100ms">
+          <div class="portrait-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="./ira_baraton.png" alt="Portrait of Ira Baraton" class="portrait">
+          <!-- <div class="status-card">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available for frontend projects
+          </div> -->
         </div>
       </div>
-  </div>
+    </section>
 
-  <!--hello section-->
-  <div class="flex-container">
-    <div class="bg-body-tertiary pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> 
-      <div class="my-3 p-3"> 
-        <h2 class="display-5">Hello.</h2> 
-        <p class="lead">I'm a web developer & illustrator based in Finland.</p> 
-        <div class="py-4 my-4"><img src="./ira_photo.png" alt="photo of me" id="ira-photo" class="img-fluid mx-auto d-block"></div>
-      </div> 
-    </div> 
-  </div>
+    <section class="intro-strip reveal" aria-label="Portfolio summary">
+      <p>
+        Practical frontend development, responsive layouts, accessible markup, and illustration sensibility for
+        interfaces that are <span class="lavender">polished</span> without losing their <span
+          class="salmon">personality</span>.
+      </p>
+    </section>
 
-<!--skills-->
-  <div class="flex-container" id="skills">
-    <div class="container px-5 py-5"> 
-      <h2 class="pb-2 border-bottom display-5">Skills</h2> 
-      <div class="row g-4 g-lg-2 py-5 row-cols-1 row-cols-lg-2"> 
-        <div class="feature col"> 
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3"> 
-          <svg class="bi" width="1em" height="1em" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
-            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-          </svg>
-            <use xlink:href="#collection"></use></svg> 
-          </div> 
-          <h3 class="fs-2 text-body-emphasis">Web Development</h3> 
-          <ul class="lead my-list">
-            <li>HTML, CSS, JavaScript</li>
-            <li>Bootstrap & responsive layouts</li>
-            <li>Clean, readable code</li>
-            <li>Accessibility-aware markup</li>
-            <li>Small, maintainable projects</li>
-          </ul> 
-          </div> 
-          <div class="feature col"> 
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3"> 
-            <svg class="bi" width="1em" height="1em" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-brush" viewBox="0 0 16 16">
-              <path d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.1 6.1 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.1 8.1 0 0 1-3.078.132 4 4 0 0 1-.562-.135 1.4 1.4 0 0 1-.466-.247.7.7 0 0 1-.204-.288.62.62 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896q.19.012.348.048c.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04M4.705 11.912a1.2 1.2 0 0 0-.419-.1c-.246-.013-.573.05-.879.479-.197.275-.355.532-.5.777l-.105.177c-.106.181-.213.362-.32.528a3.4 3.4 0 0 1-.76.861c.69.112 1.736.111 2.657-.12.559-.139.843-.569.993-1.06a3 3 0 0 0 .126-.75zm1.44.026c.12-.04.277-.1.458-.183a5.1 5.1 0 0 0 1.535-1.1c1.9-1.996 4.412-5.57 6.052-8.631-2.59 1.927-5.566 4.66-7.302 6.792-.442.543-.795 1.243-1.042 1.826-.121.288-.214.54-.275.72v.001l.575.575zm-4.973 3.04.007-.005zm3.582-3.043.002.001h-.002z"/>
-            </svg>
-            <use xlink:href="#people-circle"></use>
-          </svg>
+    <section class="section-pad" id="focus">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Frontend focus</p>
+        <h2>What I build</h2>
+        <p>
+          I care about interfaces that are easy to use, pleasant to interact with, and straightforward to maintain.
+        </p>
+      </div>
 
-            </div> 
-            <h3 class="fs-2 text-body-emphasis">Illustration & Visual Work</h3> 
-          <ul class="lead my-list">
-            <li>Digital illustration</li>
-            <li>Character & concept work</li>
-            <li>Visual storytelling</li>
-            <li>Custom assets for web</li>
-        </ul>
-        </div>
-      </div> 
-    </div>
-</div>
+      <div class="card-grid focus-grid">
+        <article class="feature-card reveal">
+          <span class="card-icon" aria-hidden="true">01</span>
+          <h3>React interfaces</h3>
+          <p>Component-based UIs, stateful interactions, responsive layouts, dark mode, drag-and-drop, polished details.
+          </p>
+        </article>
+        <article class="feature-card reveal" style="--delay: 80ms">
+          <span class="card-icon" aria-hidden="true">02</span>
+          <h3>Node & Express apps</h3>
+          <p>Routes, APIs, authentication flows, server-rendered EJS apps, and practical backend structure.</p>
+        </article>
+        <article class="feature-card reveal" style="--delay: 160ms">
+          <span class="card-icon" aria-hidden="true">03</span>
+          <h3>Data-driven projects</h3>
+          <p>PostgreSQL, external APIs, persistent storage, filtering, fetching, and app logic beyond static pages.</p>
+        </article>
+      </div>
+    </section>
 
- <!--how I work-->
-  <div class="flex-container">
-    <div class=" p-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden pb-5"> 
-      <div class="my-3 p-3"> 
-        <h2 class="display-5">How I work</h2> 
-        <p class="lead">I value clarity over complexity, and thoughtful design over trends.<br /> I like projects that balance structure and creativity, and I care about how things feel to use — not just how they look.</p> 
-      </div> 
-    </div> 
-  </div>
+    <section class="section-pad work-section" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Frontend projects with a flair</h2>
+      </div>
 
-  <!--get in touch section-->
-  <div class="bg-dark text-secondary px-4 py-5 text-center"> 
-    <div class="py-5"> 
-      <h2 class="display-5">Get in touch</h2> 
-      <div class="col-lg-6 mx-auto"> 
-        <p class="lead">If you’d like to work together or just say hello, don't hesitate to reach out.</p> 
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-3">
+      <div class="project-list">
+        <article class="project-card reveal">
+          <div class="project-thumb thumb-layout" aria-hidden="true">
+            <img src="./images/majo-memo-light.png" alt="Majo Memo screenshot" />
+            <!-- <span></span>
+            <span></span>
+            <span></span> -->
+          </div>
+          <div class="project-content">
+            <p class="project-label">Frontend project</p>
+            <h3>Majo Memo</h3>
+            <p>
+              React note-taking app with dragging, dark mode, custom themed UI.
+            </p>
+            <ul class="tag-list" aria-label="Technology stack">
+              <li>JavaScript</li>
+              <li>CSS</li>
+              <li>HTML</li>
 
-          <a class="btn btn-contact btn-lg px-4 me-sm-3" href="mailto:rabbitshaped@gmail.com" role="button">Contact me</a>
-        </div> 
-      </div> 
-    </div> 
-  </div>
+            </ul>
+            <div class="project-links">
+              <a href="https://majo-memo.onrender.com/" aria-label="Live project link">Live site</a>
+              <a href="https://github.com/rabbitshaped/majo-memo" aria-label="Source code link">Source</a>
+            </div>
+          </div>
+        </article>
 
- <!--copyright-->
-<div class="flex-container">
-  <div class="container"> 
-    <footer class="py-3 my-4"> <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul> <p class="text-center text-body-secondary">© 2026 Ira Baraton</p> 
-  </footer> </div>
-</div>
+        <article class="project-card reveal">
+          <div class="project-thumb thumb-illustration" aria-hidden="true">
+            <img src="./images/secret-archive.png" alt="Secret Archive screenshot" />
+            <!-- <span></span>
+            <span></span> -->
+          </div>
+          <div class="project-content">
+            <p class="project-label">Design + web</p>
+            <h3>Secret Archive</h3>
+            <p>
+              Anonymous secrets-sharing platform with authentication and persistent storage.
+            </p>
+            <ul class="tag-list" aria-label="Technology stack">
+              <li>Responsive design</li>
+              <li>EJS</li>
+              <li>UI polish</li>
+            </ul>
+            <div class="project-links">
+              <!-- <a href="#" aria-label="Add live experiment link">Live site</a> -->
+              <a href="https://github.com/rabbitshaped/secret-archive" aria-label="Source code link">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <section class="section-pad split-section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Developer foundations with creative instincts</h2>
+      </div>
+
+      <div class="skill-columns">
+        <article class="skill-panel reveal">
+          <h3>Frontend Development</h3>
+          <ul>
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>Responsive UI</li>
+            <li>Accessibility</li>
+            <li>Animation</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal" style="--delay: 100ms">
+          <h3>Backend & Data</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+            <li>APIs</li>
+            <li>Authentication</li>
+          </ul>
+        </article>
+        <article class="skill-panel reveal" style="--delay: 200ms">
+          <h3>Design & UX</h3>
+          <ul>
+            <li>Visual systems</li>
+            <li>Interface design</li>
+            <li>Illustration</li>
+            <li>Creative direction</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad work-method reveal">
+      <div>
+        <p class="eyebrow">How I work</p>
+        <h2>Clear first, charming where it counts.</h2>
+      </div>
+      <p>
+        I value clarity over complexity, and thoughtful design over trends. I like projects that balance structure
+        and creativity, and I care about how things feel to use, not just how they look.
+      </p>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Have a React or full-stack project that needs personality <span class="lavender">and</span> structure?</h2>
+        <p>
+          If you'd like to work together or just say hello, send me a note. I am especially interested in clean,
+          creative web projects and apps with room for thoughtful UI details.
+        </p>
+        <a class="button button-primary" href="mailto:rabbitshaped@gmail.com">Contact me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Ira Baraton</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.16 });
+
+      revealItems.forEach((item) => observer.observe(item));
+    }
+
+    const cursorGlow = document.querySelector(".cursor-glow");
+    const canUsePointer = window.matchMedia("(pointer: fine)").matches;
+
+    if (cursorGlow && canUsePointer && !prefersReducedMotion) {
+      window.addEventListener("pointermove", (event) => {
+        cursorGlow.style.setProperty("--x", `${event.clientX}px`);
+        cursorGlow.style.setProperty("--y", `${event.clientY}px`);
+      });
+    }
+  </script>
 </body>
 
 </html>
