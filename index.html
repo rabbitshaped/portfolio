@@ -70,7 +70,7 @@
       <p>
         Practical frontend development, responsive layouts, accessible markup, and illustration sensibility for
         interfaces that are <span class="lavender">polished</span> without losing their <span
-          class="salmon">personality</span>.
+          class="salmon">personality</span>
       </p>
     </section>
 
@@ -87,7 +87,7 @@
         <article class="feature-card reveal">
           <span class="card-icon" aria-hidden="true">01</span>
           <h3>React interfaces</h3>
-          <p>Component-based UIs, stateful interactions, responsive layouts, dark mode, drag-and-drop, polished details.
+          <p>Component-based UIs, responsive layouts, dark mode, drag-and-drop, polished details.
           </p>
         </article>
         <article class="feature-card reveal" style="--delay: 80ms">
@@ -98,7 +98,7 @@
         <article class="feature-card reveal" style="--delay: 160ms">
           <span class="card-icon" aria-hidden="true">03</span>
           <h3>Data-driven projects</h3>
-          <p>PostgreSQL, external APIs, persistent storage, filtering, fetching, and app logic beyond static pages.</p>
+          <p>PostgreSQL, external APIs, persistent storage, filtering and fetching.</p>
         </article>
       </div>
     </section>
@@ -106,17 +106,22 @@
     <section class="section-pad work-section" id="work">
       <div class="section-heading reveal">
         <p class="eyebrow">Selected work</p>
-        <h2>Frontend projects with a flair</h2>
+        <h2>Projects with a flair</h2>
       </div>
 
       <div class="project-list">
         <article class="project-card reveal">
-          <div class="project-thumb thumb-layout" aria-hidden="true">
-            <img src="./images/majo-memo-light.png" alt="Majo Memo screenshot" />
-            <!-- <span></span>
-            <span></span>
-            <span></span> -->
+
+          <div class="project-thumb" data-gallery="majoMemo">
+            <button class="gallery-arrow gallery-prev" type="button">←</button>
+
+            <div class="gallery-track"></div>
+
+            <button class="gallery-arrow gallery-next" type="button">→</button>
+            <button class="gallery-expand" type="button">⤢</button>
           </div>
+
+
           <div class="project-content">
             <p class="project-label">Frontend project</p>
             <h3>Majo Memo</h3>
@@ -124,9 +129,9 @@
               React note-taking app with dragging, dark mode, custom themed UI.
             </p>
             <ul class="tag-list" aria-label="Technology stack">
+              <li>React</li>
               <li>JavaScript</li>
               <li>CSS</li>
-              <li>HTML</li>
 
             </ul>
             <div class="project-links">
@@ -137,11 +142,15 @@
         </article>
 
         <article class="project-card reveal">
-          <div class="project-thumb thumb-illustration" aria-hidden="true">
-            <img src="./images/secret-archive.png" alt="Secret Archive screenshot" />
-            <!-- <span></span>
-            <span></span> -->
+          <div class="project-thumb" data-gallery="secretArchive">
+            <button class="gallery-arrow gallery-prev" type="button">←</button>
+
+            <div class="gallery-track"></div>
+
+            <button class="gallery-arrow gallery-next" type="button">→</button>
+            <button class="gallery-expand" type="button">⤢</button>
           </div>
+
           <div class="project-content">
             <p class="project-label">Design + web</p>
             <h3>Secret Archive</h3>
@@ -149,9 +158,10 @@
               Anonymous secrets-sharing platform with authentication and persistent storage.
             </p>
             <ul class="tag-list" aria-label="Technology stack">
-              <li>Responsive design</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>PostgreSQL</li>
               <li>EJS</li>
-              <li>UI polish</li>
             </ul>
             <div class="project-links">
               <!-- <a href="#" aria-label="Add live experiment link">Live site</a> -->
@@ -230,6 +240,11 @@
     <a href="#top">Back to top</a>
   </footer>
 
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" type="button">×</button>
+    <div class="lightbox-media" id="lightbox-media"></div>
+  </div>
+
   <script>
     const revealItems = document.querySelectorAll(".reveal");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -257,6 +272,88 @@
         cursorGlow.style.setProperty("--x", `${event.clientX}px`);
         cursorGlow.style.setProperty("--y", `${event.clientY}px`);
       });
+    }
+
+    const galleries = {
+      majoMemo: [
+        { type: "image", src: "./images/majo-memo-light.png", alt: "Majo Memo light mode" },
+        { type: "image", src: "./images/majo-memo-dark.png", alt: "Majo Memo dark mode" },
+      ],
+
+      secretArchive: [
+        { type: "image", src: "./images/secret-archive.png", alt: "Secret Archive confession screen" },
+      ],
+    };
+
+    function createMedia(item) {
+      if (item.type === "video") {
+        return `
+      <video autoplay muted loop playsinline>
+        <source src="${item.src}" type="video/mp4">
+      </video>
+    `;
+      }
+
+      return `<img src="${item.src}" alt="${item.alt}">`;
+    }
+
+    document.querySelectorAll("[data-gallery]").forEach((galleryElement) => {
+      const galleryName = galleryElement.dataset.gallery;
+      const media = galleries[galleryName];
+
+      if (!media || media.length === 0) return;
+
+      let currentIndex = 0;
+
+      const track = galleryElement.querySelector(".gallery-track");
+      const next = galleryElement.querySelector(".gallery-next");
+      const prev = galleryElement.querySelector(".gallery-prev");
+
+
+
+
+      function render() {
+        track.innerHTML = createMedia(media[currentIndex]);
+      }
+
+      next.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % media.length;
+        render();
+      });
+
+      prev.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + media.length) % media.length;
+        render();
+      });
+
+      const expand = galleryElement.querySelector(".gallery-expand");
+
+      expand.addEventListener("click", () => {
+        lightboxMedia.innerHTML = createMedia(media[currentIndex]);
+        lightbox.hidden = false;
+      });
+
+      render();
+    });
+
+    const lightbox = document.querySelector("#lightbox");
+    const lightboxMedia = document.querySelector("#lightbox-media");
+    const lightboxClose = document.querySelector(".lightbox-close");
+
+    lightboxClose.addEventListener("click", () => {
+      lightbox.hidden = true;
+      lightboxMedia.innerHTML = "";
+    });
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      lightboxMedia.innerHTML = "";
     }
   </script>
 </body>
